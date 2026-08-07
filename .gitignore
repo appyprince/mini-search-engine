@@ -1,0 +1,27 @@
+# Compiled executables
+*.exe
+*.out
+
+# Object files
+*.o
+*.obj
+
+# Debug files
+*.pdb
+
+# VS Code
+.vscode/
+
+# Visual Studio
+.vs/
+
+# CMake
+build/
+CMakeFiles/
+CMakeCache.txt
+
+# macOS
+.DS_Store
+
+# Logs
+*.log

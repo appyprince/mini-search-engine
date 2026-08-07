@@ -1,0 +1,25 @@
+# Mini Search Engine
+
+A C++ search engine that builds an inverted index from text documents and supports efficient keyword search.
+
+## Features
+
+- Inverted Index
+- Fast keyword lookup
+- Case-insensitive search
+- Text preprocessing
+- File system traversal
+
+## Tech Stack
+
+- C++17
+- STL
+- Filesystem
+- Hash Tables
+
+## Team
+
+- Himanshu
+- Hrithik
+- Shivanshu
+- Tushar
