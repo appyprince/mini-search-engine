@@ -1,0 +1,9 @@
+doc_id,content
+1,Search engines organize information from documents so users can find relevant results quickly.
+2,An inverted index maps each word to the documents where the word appears.
+3,Document frequency counts how many documents contain a particular word.
+4,Term frequency counts how many times a word occurs inside one document.
+5,Computer science uses algorithms and data structures to solve search and indexing problems.
+6,"A hash map provides fast lookup for words, document identifiers, and frequencies."
+7,Search ranking can use word frequency to determine which documents are more relevant.
+8,"The search engine reads documents, cleans words, builds an index, and returns matching documents."
