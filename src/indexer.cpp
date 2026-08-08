@@ -4,7 +4,7 @@ using namespace std;
 
 #include <filesystem>
 
-namespace fs = std::filesystem;
+namespace fs = filesystem;
 
 string clean_word(const string& word) {
     string cleaned = "";
@@ -21,7 +21,7 @@ int main() {
     string dataset_path = "D:/my_search_engine/dataset"; 
     
     // The Inverted Index: Word -> Set of File Paths
-    unordered_map<string, unordered_set<string>> inverted_index;
+    unordered_map<string, unordered_map<string, int>> inverted_index;
 
     cout << "Indexing files...\n";
 
@@ -43,7 +43,7 @@ int main() {
             
             // Only add to index if the word isn't empty after cleaning
             if (!processed_word.empty()) {
-                inverted_index[processed_word].insert(filepath);
+                inverted_index[processed_word][filepath]++;
             }
         }
         file.close();
@@ -64,8 +64,11 @@ int main() {
         // Look it up in the hash map
         if (inverted_index.find(query) != inverted_index.end()) {
             cout << "Found '" << query << "' in:\n";
-            for (const string& path : inverted_index[query]) {
-                cout << " -> " << path << "\n";
+            for (const auto& pair : inverted_index[query]) {
+                string path = pair.first;
+                int frequency = pair.second;
+
+                cout << " -> " << path <<" (Ocurrences : " <<frequency<<")\n";
             }
         } else {
             cout << "No results found for '" << query << "'.\n";
