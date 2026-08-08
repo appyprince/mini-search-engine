@@ -5,11 +5,12 @@
 string TextProcessor::cleanWord(const string& word)
 {
     string result;
+    string banned_word = ".,<>!(){}[]\"'";
 
     for (char c : word)
     {
-        if (isalnum(static_cast<unsigned char>(c)))
-            result += tolower(static_cast<unsigned char>(c));
+        if (banned_word.find(c)==string::npos && !isspace(c)){
+            result += tolower(c);}
     }
 
     return result;
