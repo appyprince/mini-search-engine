@@ -1,5 +1,4 @@
-#include"utils.h"
-#include<bits/stdc++.h>
+#include "utils.h"
 using namespace std;
 
 #include <filesystem>
@@ -18,7 +17,7 @@ string clean_word(const string& word) {
 }
 
 int main() {
-    string dataset_path = "D:/my_search_engine/dataset"; 
+    string dataset_path = ".././dataset"; 
     
     // The Inverted Index: Word -> Set of File Paths
     unordered_map<string, unordered_map<string, int>> inverted_index;
