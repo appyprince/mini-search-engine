@@ -5,17 +5,6 @@ using namespace std;
 
 namespace fs = filesystem;
 
-string clean_word(const string& word) {
-    string cleaned = "";
-    for (char c : word) {
-        // Keep the character only if it's NOT punctuation
-        if (!ispunct(c)) {
-            cleaned += tolower(c); // Convert to lowercase
-        }
-    }
-    return cleaned;
-}
-
 int main() {
     string dataset_path = ".././dataset"; 
     

@@ -8,5 +8,5 @@
 #include <unordered_set> // Better than vector to avoid duplicate file paths
 #include <filesystem>
 #include <cctype> // For tolower() and ispunct()
-
-std::string clean_word(const std::string& word);
+using namespace std;
+string clean_word(const string& word);
